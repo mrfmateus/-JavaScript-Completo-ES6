@@ -1,23 +1,23 @@
-// nomeie 3 propriedades ou métodos de strings
-const nome = 'Mateus';
-const nomeMaiusculo = nome.toUpperCase();
-const tamanhoNome = nome.length;
-const primeiraLetra = nome.charAt(0).toLowerCase();
-const ultimaLetra = nome.charAt(nome.length - 1).toLowerCase();
+// Crie uma array com os anos que o Brasil ganhou a copa
+// 1959, 1962, 1970, 1994, 2002
+const anosBrasilCampeaoCopaDoMundo = [1959, 1962, 1970, 1994, 2002];
 
-console.log(nome, nomeMaiusculo, tamanhoNome, primeiraLetra, ultimaLetra);
+// Interaja com a array utilizando um loop, para mostrar
+// no console a seguinte mensagem, `O brasil ganhou a copa de ${ano}`
+anosBrasilCampeaoCopaDoMundo.forEach(function (ano) {
+  console.log(`O Brasil ganhou a copa de ${ano}`);
+});
 
-// nomeie 5 propriedades ou métodos de elementos do DOM
-const botao = document.querySelector('.btn');
-const body = document.querySelector('body');
-const idBotao = botao.getAttribute('id');
-const textoBotao = botao.innerText;
-const classesBotao = botao.classList.value;
-const bodyHeight = body.style.height;
-const bodyWidth = body.style.width;
+// Interaja com um loop nas frutas abaixo e pare ao chegar em Pera
+var frutas = ["Banana", "Maçã", "Pêra", "Uva", "Melancia"];
+for (i = 0; i < frutas.length; i++) {
+  console.log(frutas[i]);
+  if (frutas[i] === "Pêra") {
+    break;
+  }
+}
 
-console.log(idBotao, textoBotao, classesBotao, bodyHeight, bodyWidth);
-
-// busque na web um objeto (método) capaz de interagir com o clipboard, 
-// clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
-new ClipboardJS(botao);
+// Coloque a última fruta da array acima em uma variável,
+// sem remover a mesma da array.
+const ultimaFruta = frutas[frutas.length - 1];
+console.log(ultimaFruta, frutas);
