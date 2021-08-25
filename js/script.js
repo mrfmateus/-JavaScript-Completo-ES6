@@ -1,77 +1,23 @@
-// Crie uma função para verificar se um valor é Truthy
-function verificaTruthy(valor) {
-    if (valor) {
-        console.log(`${valor} é Truthy`);
-    } else {
-        console.log(`${valor} é Falsy`);
-    }
-}
+// nomeie 3 propriedades ou métodos de strings
+const nome = 'Mateus';
+const nomeMaiusculo = nome.toUpperCase();
+const tamanhoNome = nome.length;
+const primeiraLetra = nome.charAt(0).toLowerCase();
+const ultimaLetra = nome.charAt(nome.length - 1).toLowerCase();
 
-verificaTruthy(0);
-verificaTruthy('teste');
+console.log(nome, nomeMaiusculo, tamanhoNome, primeiraLetra, ultimaLetra);
 
-// Crie uma função matemática que retorne o perímetro de um quadrado
-// lembrando: perímetro é a soma dos quatro lados do quadrado
-function calculaPerimetroQuadrado(lado) {
-    if (typeof lado !== 'number') {
-        console.log('Informe um número!');
-    } else {
-        return (lado * 4);
-    }
-}
+// nomeie 5 propriedades ou métodos de elementos do DOM
+const botao = document.querySelector('.btn');
+const body = document.querySelector('body');
+const idBotao = botao.getAttribute('id');
+const textoBotao = botao.innerText;
+const classesBotao = botao.classList.value;
+const bodyHeight = body.style.height;
+const bodyWidth = body.style.width;
 
-calculaPerimetroQuadrado(' ');
-console.log(`O perímetro é: ${calculaPerimetroQuadrado(10)}`);
+console.log(idBotao, textoBotao, classesBotao, bodyHeight, bodyWidth);
 
-// Crie uma função que retorne o seu nome completo
-// ela deve possuir os parâmetros: nome e sobrenome
-function getNomeCompleto(nome, sobrenome) {
-    return nome + ' ' + sobrenome;
-}
-
-console.log(getNomeCompleto('Mateus', 'Ferreira')); 
-
-// Crie uma função que verifica se um número é par
-function parOuImpar(numero) {
-    if ((numero % 2) == 0) {
-        console.log(`${numero} é par!`);
-    } else {
-        console.log(`${numero} é ímpar!`);
-    }
-}
-
-parOuImpar(20);
-parOuImpar(19);
-
-// Crie uma função que retorne o tipo de
-// dado do argumento passado nela (typeof)
-function getTipo(valor) {
-    return typeof valor;
-}
-
-console.log(getTipo(0));
-console.log(getTipo());
-console.log(getTipo(true));
-console.log(getTipo('Mateus'));
-
-// addEventListener é uma função nativa do JavaScript
-// o primeiro parâmetro é o evento que ocorre e o segundo o Callback
-// utilize essa função para mostrar no console o seu nome completo
-// quando o evento 'scroll' ocorrer.
-addEventListener('scroll', () => {
-    console.log('Mateus Renan Ferreira');
-});
-
-// Corrija o erro abaixo
-var totalPaises = 193;
-function precisoVisitar(paisesVisitados) {    
-    return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
-}
-
-function jaVisitei(paisesVisitados) {
-    return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
-}
-
-console.log(precisoVisitar(20)); 
-console.log(jaVisitei(20)); 
-  
+// busque na web um objeto (método) capaz de interagir com o clipboard, 
+// clipboard é a parte do seu computador que lida com o CTRL + C e CTRL + V
+new ClipboardJS(botao);
